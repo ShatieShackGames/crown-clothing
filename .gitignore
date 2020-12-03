@@ -11,6 +11,12 @@
 # production
 /build
 
+# ide
+.idea/
+
+# cache files
+.eslintcache
+
 # misc
 .DS_Store
 .env.local
