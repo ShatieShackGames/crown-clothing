@@ -8,7 +8,7 @@ import { selectCurrentUser } from "../../redux/user/user.selectors";
 
 import {auth} from "../../firebase/firebase.utils";
 
-import {ReactComponent as Logo} from '../../../src/assets/crown.svg'
+import {ReactComponent as Logo} from '../../../src/assets/dlc-circle-logo.svg'
 import CartIcon from "../cart-icon/cart-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 
@@ -18,7 +18,9 @@ import './header.styles.scss';
 const Header = ({currentUser, hidden}) => (
     <div className='header'>
         <Link to="/">
-            <Logo className='logo'/>
+            <div className='logo-container'>
+                <Logo />
+            </div>
         </Link>
 
         <div className='options'>
