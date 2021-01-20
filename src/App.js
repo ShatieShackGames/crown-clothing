@@ -2,7 +2,7 @@ import React from 'react';
 
 import {Route, Switch, Redirect} from "react-router-dom";
 import {connect} from "react-redux";
-import { createStructuredSelector } from "reselect";
+import {createStructuredSelector} from "reselect";
 
 import './App.css';
 
@@ -14,6 +14,7 @@ import CheckoutPage from "./pages/checkout/checkout.component";
 
 import {selectCurrentUser} from "./redux/user/user.selectors";
 import {checkUserSession} from "./redux/user/user.actions";
+import {useEffect} from "react";
 
 const HatsPage = () => (
     <div>
@@ -21,28 +22,27 @@ const HatsPage = () => (
     </div>
 )
 
-class App extends React.Component {
-    unsubscribeFromAuth = null;
+const App = ({checkUserSession, currentUser}) => {
 
-    componentDidMount() {
-        const {checkUserSession} = this.props;
+    useEffect(() => {
         checkUserSession();
-    }
+    }, [checkUserSession])
 
-    render() {
-        return (
-            <div>
-                <Header />
-                <Switch>
-                    <Route exact={true} path='/' component={Homepage}/>
-                    <Route path='/hats' component={HatsPage}/>
-                    <Route path='/shop' component={ShopPage}/>
-                    <Route exact path='/signIn' render={() => this.props.currentUser ? (<Redirect to='/' />) : (<SignInAndSignUpPage />)} />
-                    <Route exact path='/checkout' component={CheckoutPage} />
-                </Switch>
-            </div>
-        )
-    }
+
+    return (
+        <div>
+            <Header/>
+            <Switch>
+                <Route exact={true} path='/' component={Homepage}/>
+                <Route path='/hats' component={HatsPage}/>
+                <Route path='/shop' component={ShopPage}/>
+                <Route exact path='/signIn'
+                       render={() => currentUser ? (<Redirect to='/'/>) : (<SignInAndSignUpPage/>)}/>
+                <Route exact path='/checkout' component={CheckoutPage}/>
+            </Switch>
+        </div>
+    )
+
 }
 
 const mapStateToProps = createStructuredSelector({
