@@ -4,7 +4,7 @@ import {Route, Switch, Redirect} from "react-router-dom";
 import {connect} from "react-redux";
 import {createStructuredSelector} from "reselect";
 
-import './App.css';
+import {GlobalStyle} from './global.styles';
 
 import Header from "./components/header/header.component";
 import {Homepage} from "./pages/homepage/homepage.component";
@@ -28,9 +28,9 @@ const App = ({checkUserSession, currentUser}) => {
         checkUserSession();
     }, [checkUserSession])
 
-
     return (
         <div>
+            <GlobalStyle />
             <Header/>
             <Switch>
                 <Route exact={true} path='/' component={Homepage}/>
