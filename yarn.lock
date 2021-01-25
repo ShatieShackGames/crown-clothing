@@ -297,6 +297,14 @@
     "@heroku-cli/command" "^8.0.5"
     heroku-cli-util "^8.0.0"
 
+"@heroku/buildpack-registry@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@heroku/buildpack-registry/-/buildpack-registry-1.0.1.tgz#5d7cc125cff5d984b88edcebc0e9dc0cc579f591"
+  integrity sha512-cbB6ND+unRk692jf1PctcoqnmuyifanTMtFStucXukkpyeI/QgXac5qJNb3g6yhHOObTghJBXi9Uzy1KBcnPgQ==
+  dependencies:
+    node-fetch "^2.2.0"
+    "true-myth" "^2.0.0"
+
 "@heroku/foreman@^2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@heroku/foreman/-/foreman-2.0.2.tgz#e24f8611bb0633ca89095648243d3a90564749fc"
@@ -3093,6 +3101,11 @@ nice-try@^1.0.4:
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
+node-fetch@^2.2.0:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
+  integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
+
 node-forge@0.7.5:
   version "0.7.5"
   resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.7.5.tgz#6c152c345ce11c52f465c2abd957e8639cd674df"
@@ -4383,6 +4396,11 @@ treeify@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/treeify/-/treeify-1.1.0.tgz#4e31c6a463accd0943879f30667c4fdaff411bb8"
   integrity sha512-1m4RA7xVAJrSGrrXGs0L3YTwyvBs2S8PbRHaLZAkFw7JR8oIFwYtysxlBZhYIa7xSyiYJKZ3iGrrk55cGA3i9A==
+
+"true-myth@^2.0.0":
+  version "2.2.8"
+  resolved "https://registry.yarnpkg.com/true-myth/-/true-myth-2.2.8.tgz#c3ecbc9eacf260d8d5584b102f8bbd10677d8a24"
+  integrity sha512-ds6rEGLDgVZZId9v+WK0kj7gc7x6LOJ8HVGGDrrWekYdJGCShGeV37z39124zgF73OtmlAqoDDZnDTmygr2D4g==
 
 ts-lodash@^4.0.11, ts-lodash@^4.0.8:
   version "4.0.11"
